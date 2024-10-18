@@ -31,8 +31,8 @@ for i in range(1, N + 2):  # Iterasi dimulai dari 1 dan berakhir pada N+1
     product = fi * fi_next if fi_next is not None else None
     data.append([i, xi, fi, fi_next, product])  # Menyimpan iterasi yang dimulai dari 1
 
-    # Mengecek kondisi |f(xk)| < |f(xk+1)|, hanya untuk iterasi selain yang terakhir
-    if i < N + 1 and abs(fi) < abs(fi_next):
+    # Mengecek kondisi |f(xk)| < |f(xk+1)|, dan memilih iterasi yang paling atas
+    if chosen_iteration is None and i < N + 1 and abs(fi) < abs(fi_next):
         chosen_iteration = i
         chosen_x = xi
 
@@ -48,4 +48,4 @@ if chosen_iteration is not None:
     print(f"\nJadi karena nilai |f(xk)| < |f(xk+1)| pada iterasi ke-{chosen_iteration},")
     print(f"maka nilai x yang diambil adalah nilai x pada iterasi tersebut yaitu {chosen_x}.")
 else:
-    print("\nTidak ada iterasi yang memenuhi syarat |f(xk)| < |f(xk+1)|.")  
+    print("\nTidak ada iterasi yang memenuhi syarat |f(xk)| < |f(xk+1)|.")
