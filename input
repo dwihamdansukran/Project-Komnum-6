@@ -1,0 +1,32 @@
+import numpy as np
+import pandas as pd
+from tabulate import tabulate  # Memerlukan library tabulate
+
+def f(x):
+    # User input function to be evaluated
+    return eval(func_input)
+
+# Input dari pengguna
+func_input = input("Masukkan fungsi f(x) (gunakan 'x' sebagai variabel, misal: x**2 + 2*x + 1): ")
+N = int(input("Masukkan jumlah langkah N: "))
+H = float(input("Masukkan nilai H: "))  # Input nilai H
+batas_bawah = float(input("Masukkan batas bawah: "))
+batas_atas = float(input("Masukkan batas atas: "))
+
+# Menyiapkan list untuk menyimpan nilai
+data = []
+
+# Menghitung nilai f(xi) dan f(x(i+1))
+for i in range(N + 1):
+    xi = batas_bawah + i * H  # Menghitung xi menggunakan H
+    fi = f(xi)
+    fi_next = f(batas_bawah + (i + 1) * H) if i < N else None
+    product = fi * fi_next if fi_next is not None else None
+    data.append([xi, fi, fi_next, product])
+
+# Membuat DataFrame untuk tampilan tabel tanpa indeks
+df = pd.DataFrame(data, columns=['xi', 'f(xi)', 'f(x(i+1))', 'f(xi) * f(x(i+1))'])
+
+# Menampilkan tabel dengan garis
+print("\nTabel Hasil:")
+print(tabulate(df, headers='keys', tablefmt='grid'))
