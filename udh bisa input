@@ -43,3 +43,6 @@ def calculate():
 
          # Membuat DataFrame untuk menyimpan hasil perhitungan
         df = pd.DataFrame(data, columns=['      xi', '      f(xi) ', '          f(x(i+1)) ', '      f(xi) * f(x(i+1))'])
+
+        # Menghapus konten sebelumnya dari TextBox hasil
+        result_box.delete(1.0, tk.END)
