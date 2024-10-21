@@ -54,8 +54,14 @@ def hitung():
         table_str = tabulate(df, headers='keys', floatfmt=".4f", numalign="center")
         result_box.insert(tk.END, table_str)  # Menampilkan tabel dalam TextBox
 
-        # xera Menampilkan hasil iterasi yang memenuhi syarat
+        # Menampilkan hasil iterasi yang memenuhi syarat
+          if chosen_iteration is not None:
+            result_box.insert(tk.END, f"\n\nIterasi ke-{chosen_iteration - 1}, nilai x: {chosen_x:.4f}")
+        else:
+            result_box.insert(tk.END, "\n\nTidak ada iterasi yang memenuhi syarat |f(xk)| < |f(xk+1)|.")
     
+    except ValueError as ve:
+        messagebox.showerror("Input Error", f"Invalid input: {ve}")  
 # Fungsi untuk menampilkan plot
 def tampilkan_plot():
     if not data:
