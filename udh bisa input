@@ -46,3 +46,6 @@ def calculate():
 
         # Menghapus konten sebelumnya dari TextBox hasil
         result_box.delete(1.0, tk.END)
+        # Menggunakan tabulate untuk merapikan tampilan tabel dalam bentuk grid
+        table_str = tabulate(df, headers='keys', floatfmt=".4f", numalign="center")
+        result_box.insert(tk.END, table_str)  # Menampilkan tabel dalam TextBox
