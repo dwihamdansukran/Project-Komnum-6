@@ -126,8 +126,9 @@ tk.Label(frame_input, text="Batas Atas:", **label_style).grid(row=3, column=0, p
 entry_atas = tk.Entry(frame_input, width=10, font=('Comic Sans MS', 12))
 entry_atas.grid(row=3, column=1, padx=5, pady=5)
 
-# xera Tombol untuk menjalankan perhitungan
-
+# Tombol untuk menjalankan perhitungan
+btn_calculate = tk.Button(main_frame, text="Hitung", command=calculate, font=('Arial', 12, 'bold'), bg='#FF0000', fg='#FFFFFF', width=20)
+btn_calculate.pack(pady=7)
 # Tombol untuk menampilkan plot
 btn_plot = tk.Button(main_frame, text="Tampilkan Plot", command=show_plot, font=('Arial', 12, 'bold'), bg='#8B4000', fg='#FFFFFF', width=20)
 btn_plot.pack(pady=7)
