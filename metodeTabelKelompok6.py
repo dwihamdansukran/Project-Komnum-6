@@ -96,8 +96,9 @@ root.configure(bg='#001F3F')  # Warna background navy
 judul = tk.Label(root, text="Metode Tabel", font=('Comic Sans MS', 16, 'bold'), bg='#001F3F', fg='#FFFFFF')
 judul.pack(pady=10)
 
-# xera Frame utama untuk mengelompokkan input, hasil, dan keyboard
-
+# Frame utama untuk mengelompokkan input, hasil, dan keyboard
+main_frame = tk.Frame(root, bg='#001F3F')
+main_frame.pack(pady=10)
 # Bingkai untuk input pengguna
 frame_input = tk.Frame(main_frame, bg='#001F3F', borderwidth=2, relief='groove')  # Bingkai dengan relief dan border
 frame_input.pack(pady=8, fill=tk.X)
