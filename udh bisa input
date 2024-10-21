@@ -40,3 +40,6 @@ def calculate():
             if chosen_iteration is None and i < N + 1 and abs(fi) < abs(fi_next):
                 chosen_iteration = i
                 chosen_x = xi
+
+         # Membuat DataFrame untuk menyimpan hasil perhitungan
+        df = pd.DataFrame(data, columns=['      xi', '      f(xi) ', '          f(x(i+1)) ', '      f(xi) * f(x(i+1))'])
