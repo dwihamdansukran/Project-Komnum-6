@@ -121,3 +121,7 @@ entry_atas.grid(row=3, column=1, padx=5, pady=5)
 # Tombol untuk menampilkan plot
 btn_plot = tk.Button(main_frame, text="Tampilkan Plot", command=show_plot, font=('Arial', 12, 'bold'), bg='#8B4000', fg='#FFFFFF', width=20)
 btn_plot.pack(pady=7)
+
+# Bingkai untuk text box hasil
+frame_result = tk.Frame(main_frame, bg='#001F3F', borderwidth=2, relief='groove')  # Bingkai untuk hasil
+frame_result.pack(pady=7, fill=tk.BOTH)
