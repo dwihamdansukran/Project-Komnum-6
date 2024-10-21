@@ -1,9 +1,9 @@
 import numpy as np
 import pandas as pd
-from tabulate import tabulate  # Memerlukan library tabulate
+from tabulate import tabulate
 import tkinter as tk
 from tkinter import messagebox
-import matplotlib.pyplot as plt  # Memerlukan library matplotlib
+import matplotlib.pyplot as plt
 
 # Fungsi untuk menjalankan evaluasi fungsi yang dimasukkan pengguna
 def f(x):
