@@ -93,3 +93,11 @@ judul.pack(pady=10)
 frame_input = tk.Frame(main_frame, bg='#001F3F', borderwidth=2, relief='groove')  # Bingkai dengan relief dan border
 frame_input.pack(pady=8, fill=tk.X)
 
+# Gaya Label
+label_style = {'bg': '#001F3F', 'fg': '#FFFFFF', 'font': ('Comic Sans MS', 12)}
+
+# Input fungsi
+tk.Label(frame_input, text="Fungsi f(x):", **label_style).grid(row=0, column=0, padx=5, pady=5)
+func_input = tk.Entry(frame_input, width=30, font=('Comic Sans MS', 12))
+func_input.grid(row=0, column=1, padx=5, pady=5)
+
