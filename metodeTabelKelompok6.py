@@ -14,7 +14,7 @@ def f(x):
         return None
 
 # Fungsi utama untuk melakukan perhitungan dan menampilkan hasil
-def calculate():
+def hitung():
     global data  # Menyimpan data ke variabel global untuk digunakan di plot
     try:
         N = int(entry_N.get())  # Mengambil jumlah langkah N dari input
@@ -54,7 +54,7 @@ def calculate():
         # xera Menampilkan hasil iterasi yang memenuhi syarat
     
 # Fungsi untuk menampilkan plot
-def show_plot():
+def tampilkan_plot():
     if not data:
         messagebox.showerror("Error", "Tidak ada data untuk diplot. Harap hitung terlebih dahulu.")
         return
@@ -74,7 +74,7 @@ def show_plot():
     plt.show()
 
 # Fungsi untuk menambah karakter ke input fungsi saat tombol di keyboard virtual ditekan
-def insert_key(value):
+def tambahkan_karakter(value):
     func_input.insert(tk.END, value)
 
 # Membuat aplikasi utama
