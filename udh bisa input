@@ -101,3 +101,7 @@ tk.Label(frame_input, text="Fungsi f(x):", **label_style).grid(row=0, column=0, 
 func_input = tk.Entry(frame_input, width=30, font=('Comic Sans MS', 12))
 func_input.grid(row=0, column=1, padx=5, pady=5)
 
+# Input jumlah langkah N
+tk.Label(frame_input, text="Jumlah Langkah (N):", **label_style).grid(row=1, column=0, padx=5, pady=5)
+entry_N = tk.Entry(frame_input, width=10, font=('Comic Sans MS', 12))
+entry_N.grid(row=1, column=1, padx=5, pady=5)
