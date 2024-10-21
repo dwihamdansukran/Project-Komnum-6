@@ -12,3 +12,11 @@ def f(x):
     except Exception as e:
         messagebox.showerror("Error", f"Error in function evaluation: {e}")
         return None
+
+# Fungsi utama untuk melakukan perhitungan dan menampilkan hasil
+def calculate():
+    global data  # Menyimpan data ke variabel global untuk digunakan di plot
+    try:
+        N = int(entry_N.get())  # Mengambil jumlah langkah N dari input
+        batas_bawah = float(entry_bawah.get())  # Mengambil batas bawah dari input
+        batas_atas = float(entry_atas.get())  # Mengambil batas atas dari input
