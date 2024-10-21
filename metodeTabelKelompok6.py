@@ -21,8 +21,11 @@ def hitung():
         batas_bawah = float(entry_bawah.get())  # Mengambil batas bawah dari input
         batas_atas = float(entry_atas.get())  # Mengambil batas atas dari input
 
-        # xera Menyiapkan list untuk menyimpan data tabel
-
+        # Menyiapkan list untuk menyimpan data tabel
+        data = []
+        chosen_iteration = None
+        chosen_x = None
+        H = (batas_atas - batas_bawah) / N  # Menghitung jarak antar titik
         # Melakukan iterasi untuk menghitung xi, f(xi), dan f(xi+1)
         for i in range(1, N + 2):
             xi = batas_bawah + (i - 1) * H
