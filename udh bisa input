@@ -76,7 +76,8 @@ def show_plot():
 # Fungsi untuk menambah karakter ke input fungsi saat tombol di keyboard virtual ditekan
 def insert_key(value):
     func_input.insert(tk.END, value)
-# dan Membuat aplikasi utama
+
+# Membuat aplikasi utama
 root = tk.Tk()
 root.title("Metode Tabel Kelompok 6")
 root.geometry("500x950")  # Menambah tinggi window untuk keyboard
