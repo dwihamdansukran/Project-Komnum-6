@@ -125,3 +125,10 @@ btn_plot.pack(pady=7)
 # Bingkai untuk text box hasil
 frame_result = tk.Frame(main_frame, bg='#001F3F', borderwidth=2, relief='groove')  # Bingkai untuk hasil
 frame_result.pack(pady=7, fill=tk.BOTH)
+
+# Text box untuk menampilkan 
+result_box = tk.Text(frame_result, height=40, width=70, bg='#FFFFFF', fg='#000000', font=('Comic Sans MS', 10))  # Menggunakan font Comic Sans MS
+result_box.pack(pady=10)
+
+# Menjalankan aplikasi
+root.mainloop()
