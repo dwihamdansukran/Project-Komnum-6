@@ -35,3 +35,8 @@ def calculate():
 
             product = fi * fi_next if fi_next is not None else None
             data.append([xi, fi, fi_next, product])
+
+            # Mengecek kondisi |f(xk)| < |f(xk+1)| dan menyimpan iterasi pertama yang memenuhi syarat
+            if chosen_iteration is None and i < N + 1 and abs(fi) < abs(fi_next):
+                chosen_iteration = i
+                chosen_x = xi
