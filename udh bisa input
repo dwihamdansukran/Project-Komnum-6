@@ -82,3 +82,8 @@ root = tk.Tk()
 root.title("Metode Tabel Kelompok 6")
 root.geometry("500x950")  # Menambah tinggi window untuk keyboard
 root.configure(bg='#001F3F')  # Warna background navy
+
+# Judul Aplikasi
+judul = tk.Label(root, text="Metode Tabel", font=('Comic Sans MS', 16, 'bold'), bg='#001F3F', fg='#FFFFFF')
+judul.pack(pady=10)
+
