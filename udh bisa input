@@ -115,3 +115,9 @@ entry_bawah.grid(row=2, column=1, padx=5, pady=5)
 tk.Label(frame_input, text="Batas Atas:", **label_style).grid(row=3, column=0, padx=5, pady=5)
 entry_atas = tk.Entry(frame_input, width=10, font=('Comic Sans MS', 12))
 entry_atas.grid(row=3, column=1, padx=5, pady=5)
+
+# xera Tombol untuk menjalankan perhitungan
+
+# Tombol untuk menampilkan plot
+btn_plot = tk.Button(main_frame, text="Tampilkan Plot", command=show_plot, font=('Arial', 12, 'bold'), bg='#8B4000', fg='#FFFFFF', width=20)
+btn_plot.pack(pady=7)
