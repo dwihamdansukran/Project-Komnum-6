@@ -75,7 +75,7 @@ def show_plot():
 
 # Fungsi untuk menambah karakter ke input fungsi saat tombol di keyboard virtual ditekan
 def insert_key(value):
-    
+    func_input.insert(tk.END, value)
 
 # Membuat aplikasi utama
 root = tk.Tk()
