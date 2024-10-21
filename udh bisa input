@@ -41,7 +41,7 @@ def calculate():
                 chosen_iteration = i
                 chosen_x = xi
 
-         # Membuat DataFrame untuk menyimpan hasil perhitungan
+        # Membuat DataFrame untuk menyimpan hasil perhitungan
         df = pd.DataFrame(data, columns=['      xi', '      f(xi) ', '          f(x(i+1)) ', '      f(xi) * f(x(i+1))'])
 
         # Menghapus konten sebelumnya dari TextBox hasil
