@@ -59,19 +59,19 @@ def show_plot():
         messagebox.showerror("Error", "Tidak ada data untuk diplot. Harap hitung terlebih dahulu.")
         return
 
-        # Memisahkan data untuk plot
-        x_values = [row[0] for row in data]
-        y_values = [row[1] for row in data]
+    # Memisahkan data untuk plot
+    x_values = [row[0] for row in data]
+    y_values = [row[1] for row in data]
 
-        plt.figure(figsize=(10, 5))
-        plt.plot(x_values, y_values, marker='o', linestyle='-', color='blue')
-        plt.title('Plot Fungsi f(x)')
-        plt.xlabel('xi')
-        plt.ylabel('f(xi)')
-        plt.grid(True)
-        plt.axhline(0, color='red',linewidth=2.0, ls='--')  # Garis horizontal pada y=0
-        plt.axvline(0, color='black',linewidth=0.5, ls='--')  # Garis vertikal pada x=0
-        plt.show()
+    plt.figure(figsize=(10, 5))
+    plt.plot(x_values, y_values, marker='o', linestyle='-', color='blue')
+    plt.title('Plot Fungsi f(x)')
+    plt.xlabel('xi')
+    plt.ylabel('f(xi)')
+    plt.grid(True)
+    plt.axhline(0, color='red',linewidth=2.0, ls='--')  # Garis horizontal pada y=0
+    plt.axvline(0, color='black',linewidth=0.5, ls='--')  # Garis vertikal pada x=0
+    plt.show()
 
 # Fungsi untuk menambah karakter ke input fungsi saat tombol di keyboard virtual ditekan
 def insert_key(value):
