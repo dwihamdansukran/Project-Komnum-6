@@ -21,9 +21,9 @@ def calculate():
         batas_bawah = float(entry_bawah.get())  # Mengambil batas bawah dari input
         batas_atas = float(entry_atas.get())  # Mengambil batas atas dari input
 
- # xera Menyiapkan list untuk menyimpan data tabel
+        # xera Menyiapkan list untuk menyimpan data tabel
 
-# Melakukan iterasi untuk menghitung xi, f(xi), dan f(xi+1)
+        # Melakukan iterasi untuk menghitung xi, f(xi), dan f(xi+1)
         for i in range(1, N + 2):
             xi = batas_bawah + (i - 1) * H
             fi = f(xi)
