@@ -1,51 +1,14 @@
 import numpy as np
 import pandas as pd
 from tabulate import tabulate  # Memerlukan library tabulate
+import tkinter as tk
+from tkinter import messagebox
+import matplotlib.pyplot as plt  # Memerlukan library matplotlib
 
+# Fungsi untuk menjalankan evaluasi fungsi yang dimasukkan pengguna
 def f(x):
-    # Fungsi yang diinput oleh pengguna akan dievaluasi
-    return eval(func_input)
-
-# Input dari pengguna
-func_input = input("Masukkan fungsi f(x) (gunakan 'x' sebagai variabel, misal: x**2 + 2*x + 1): ")
-N = int(input("Masukkan jumlah langkah N: "))
-H = float(input("Masukkan nilai H: "))  # Input nilai H
-batas_bawah = float(input("Masukkan batas bawah: "))
-batas_atas = float(input("Masukkan batas atas: "))
-
-# Menyiapkan list untuk menyimpan nilai
-data = []
-chosen_iteration = None
-chosen_x = None
-
-# Menghitung nilai f(xi) dan f(x(i+1)), dengan iterasi dimulai dari 1
-for i in range(1, N + 2):  # Iterasi dimulai dari 1 dan berakhir pada N+1
-    xi = batas_bawah + (i - 1) * H  # Menghitung xi menggunakan H
-    fi = f(xi)
-    
-    if i < N + 1:  # Menghitung f(x(i+1)) jika bukan iterasi terakhir
-        fi_next = f(batas_bawah + i * H)
-    else:
-        fi_next = None  # Tidak ada f(x(i+1)) untuk iterasi terakhir
-    
-    product = fi * fi_next if fi_next is not None else None
-    data.append([i, xi, fi, fi_next, product])  # Menyimpan iterasi yang dimulai dari 1
-
-    # Mengecek kondisi |f(xk)| < |f(xk+1)|, dan memilih iterasi yang paling atas
-    if chosen_iteration is None and i < N + 1 and abs(fi) < abs(fi_next):
-        chosen_iteration = i
-        chosen_x = xi
-
-# Membuat DataFrame untuk tampilan tabel tanpa indeks
-df = pd.DataFrame(data, columns=['Iterasi', 'xi', 'f(xi)', 'f(x(i+1))', 'f(xi) * f(x(i+1))'])
-
-# Menampilkan tabel dengan garis
-print("\nTabel Hasil:")
-print(tabulate(df, headers='keys', tablefmt='grid'))
-
-# Menampilkan hasil akhir dengan iterasi yang memenuhi syarat
-if chosen_iteration is not None:
-    print(f"\nJadi karena nilai |f(xk)| < |f(xk+1)| pada iterasi ke-{chosen_iteration},")
-    print(f"maka nilai x yang diambil adalah nilai x pada iterasi tersebut yaitu {chosen_x}.")
-else:
-    print("\nTidak ada iterasi yang memenuhi syarat |f(xk)| < |f(xk+1)|.")
+    try:
+        return eval(func_input.get())
+    except Exception as e:
+        messagebox.showerror("Error", f"Error in function evaluation: {e}")
+        return None
